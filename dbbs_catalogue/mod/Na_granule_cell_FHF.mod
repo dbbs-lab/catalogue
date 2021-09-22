@@ -13,7 +13,7 @@ NEURON {
 	RANGE gnabar, ina, g
 	RANGE gamma, delta, epsilon, Con, Coff, Oon, Ooff, Lon, Loff
 	RANGE Aalfa, Valfa, Abeta, Vbeta, Ateta, Vteta, Agamma, Adelta, Aepsilon, ACon, ACoff, AOon, AOoff
-	RANGE n1, n2, n3, n4, c
+	RANGE n1, n2, n3, n4, c, d
 }
 
 UNITS {

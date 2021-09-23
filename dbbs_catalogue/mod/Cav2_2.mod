@@ -38,7 +38,6 @@ NEURON {
 	USEION ca READ cai,cao WRITE ica
   RANGE gcanbar, ica, gcan
   RANGE hinf,minf,taum,tauh
-	RANGE ki,q10,mmin,hmin,a0m,zetam,gmm
 }
 
 STATE {

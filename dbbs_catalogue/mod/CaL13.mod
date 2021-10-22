@@ -11,8 +11,8 @@ UNITS {
 
 NEURON {
 	SUFFIX CaL13
-	USEION cal READ cali, calo WRITE ical VALENCE 2
-	RANGE pcaLbar, ical, mshift, hshift, qfact, hqfact
+	USEION ca READ cai, cao WRITE ica VALENCE 2
+	RANGE pcaLbar, ica, mshift, hshift, qfact, hqfact
 }
 
 CONSTANT {
@@ -31,7 +31,7 @@ PARAMETER {
 	k = 9.005   	(mV)		: Kasai 1992, fig 15
 	kpr = 31.4   	(mV)		: Kasai 1992, fig 15
 	c = 0.0398   	(/ms/mV)	: Kasai 1992, fig 15
-	cpr = 0.99		(/ms)		: Kasai 1992, fig 15
+	cpr = 0.99	(/ms)		: Kasai 1992, fig 15
 
 	hvhalf = -13.4	(mV)		: Bell 2001, fig 2
 	hslope = 11.9	(mV)		: Bell 2001, fig 2
@@ -61,7 +61,7 @@ STATE {
 
 BREAKPOINT {
     SOLVE states METHOD cnexp
-    ical  = ghk(v,cali,calo) * pcaLbar * m * m * h	  : Kasai 92, Brown 93
+    ica  = ghk(v,cai,cao) * pcaLbar * m * m * h	  : Kasai 92, Brown 93
 }
 
 INITIAL {

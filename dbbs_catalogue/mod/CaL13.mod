@@ -21,6 +21,7 @@ CONSTANT {
 }
 
 PARAMETER {
+	celsius		(degC)
 	pcaLbar = 1.7e-6    (cm/s)	: hold at vh = -100 mv, step to -30 mv
 
 	mvhalf = -33	(mV)		: match to Xu 2001 Figure 1D with mslope from churchill
@@ -47,8 +48,6 @@ ASSIGNED {
     v 		(mV)
     ecal 	(mV)
 
-    celsius	(degC)
-
     minf
     mtau 	(ms)
 
@@ -61,7 +60,7 @@ STATE {
 
 BREAKPOINT {
     SOLVE states METHOD cnexp
-    ica  = ghk(v,cai,cao) * pcaLbar * m * m * h	  : Kasai 92, Brown 93
+    ica  = ghk(v,cai,cao,celsius) * pcaLbar * m * m * h	  : Kasai 92, Brown 93
 }
 
 INITIAL {
@@ -92,7 +91,7 @@ PROCEDURE settables( v (mV) ) {
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 : ghk() borrowed from cachan.mod share file in Neuron
-FUNCTION ghk(v(mV), ci(mM), co(mM)) (.001 coul/cm3) {
+FUNCTION ghk(v(mV), ci(mM), co(mM), celsius) (.001 coul/cm3) {
 	LOCAL z, eci, eco
 	z = (1e-3)*2*FARADAY*v/(R*(celsius+273.15))
 	eco = co*efun(z)

@@ -16,9 +16,6 @@ UNITS {
     (mM) = (millimolar)
 }
 
-INDEPENDENT {
-t}
-
 CONSTANT {
     q10 = 3
 }

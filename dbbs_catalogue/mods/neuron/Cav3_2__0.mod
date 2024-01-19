@@ -1,8 +1,5 @@
 TITLE Low threshold calcium current
 
-INDEPENDENT {
-t}
-
 NEURON {
     SUFFIX glia__dbbs__Cav3_2__0
     USEION ca READ cai, cao WRITE ica

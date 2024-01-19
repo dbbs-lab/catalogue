@@ -19,9 +19,6 @@ Contact: Sungho Hong (shhong@oist.jp)
 
 ENDCOMMENT
 
-INDEPENDENT {
-t}
-
 NEURON {
     SUFFIX glia__dbbs__Cav2_1__0
     USEION ca READ cai, cao WRITE ica

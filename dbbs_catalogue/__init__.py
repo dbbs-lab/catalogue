@@ -81,6 +81,9 @@ package = Package(
         Mod("mods/neuron/Cav3_3__0.mod", "Cav3_3", dialect="neuron"),
         Mod("mods/neuron/cdp5__0.mod", "cdp5", dialect="neuron"),
         Mod("mods/neuron/cdp5__CAM.mod", "cdp5", variant="CAM", dialect="neuron"),
+        Mod(
+            "mods/neuron/cdp5__CAM_GoC.mod", "cdp5", variant="CAM_GoC", dialect="neuron"
+        ),
         Mod("mods/neuron/cdp5__CR.mod", "cdp5", variant="CR", dialect="neuron"),
         Mod("mods/neuron/GABA__0.mod", "GABA", is_point_process=True, dialect="neuron"),
         Mod(

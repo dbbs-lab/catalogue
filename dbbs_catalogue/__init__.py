@@ -122,6 +122,12 @@ package = Package(
             is_point_process=True,
             dialect="neuron",
         ),
+        Mod(
+            "mods/neuron/Iext__0.mod",
+            "Iext",
+            is_point_process=True,
+            dialect="neuron",
+        ),
         Mod("mods/neuron/HCN1__0.mod", "HCN1", dialect="neuron"),
         Mod("mods/neuron/HCN1__golgi.mod", "HCN1", variant="golgi", dialect="neuron"),
         Mod("mods/neuron/HCN2__0.mod", "HCN2", dialect="neuron"),

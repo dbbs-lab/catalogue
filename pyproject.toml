@@ -4,11 +4,11 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "dbbs-catalogue"
-authors = [{name = "Robin De Schepper", email = "robingilbert.deschepper@unipv.it"}]
+authors = [{name = "Robin De Schepper", email = "robin@alexandria.sc"}]
 readme = "README.rst"
 license = {file = "LICENSE"}
 dynamic = ["version", "description"]
-dependencies = ["nmodl-glia~=4.0"]
+dependencies = ["nmodl-glia~=6.0"]
 
 [project.entry-points."glia.package"]
 "dbbs_catalogue" = "dbbs_catalogue:package"
